@@ -1,0 +1,10 @@
+.vscode/
+src/
+dev/
+node_modules/
+tsconfig.json
+tslint.json
+.travis.yml
+yarn-error.log
+pnpm-lock.yaml
+package-lock.json
