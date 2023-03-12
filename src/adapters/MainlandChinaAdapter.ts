@@ -3,10 +3,11 @@ import Adapter, { AdapterHandleOptinos } from '@/types/adapter'
 /**
  * 中国大陆地区
  */
-export default class MainlandChinaAdapter extends Adapter {
+export class MainlandChinaAdapter extends Adapter {
   public handle(options: AdapterHandleOptinos) {
     // 发送人手机号
     const sender = '089168' + this.reverse(`${options.sender}F`)
+    // 接收人手机号
     const receiver = '68' + this.reverse(`${options.receiver}F`)
     const messageUnicode = this.message2Unicode(options.message)
     const CMGSLengthString = `11000D91${receiver}0008AA${messageUnicode}`
